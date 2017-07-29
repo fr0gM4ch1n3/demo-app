@@ -4,13 +4,15 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { ListModule } from './list/list.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,11 +3,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ListModule } from './list/list.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule, HttpModule ],
+      imports: [ RouterTestingModule, HttpModule, ListModule ],
       declarations: [
         AppComponent
       ],
