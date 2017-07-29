@@ -19,4 +19,26 @@ describe('List', () => {
   it('should have 10 entries in user list', () => {
     expect(element.all(by.css('app-list ul li')).count()).toEqual(10);
   });
+
+  it('should not have selected class', () => {
+    expect(element.all(by.css('app-list ul li.selected')).count()).toEqual(0);
+  });
+
+  it('should have selected class after clicked', () => {
+    element.all(by.css('app-list ul li')).first().click();
+    browser.waitForAngular();
+    expect(element.all(by.css('app-list ul li')).first().getAttribute('class')).toContain('selected');
+  });
+
+  it('should redirect to user data for the first user', () => {
+    element.all(by.css('app-list ul li')).first().click();
+    browser.waitForAngular();
+    expect(browser.getCurrentUrl()).toContain('/show/1');
+  });
+
+  it('should redirect to user data for the last user', () => {
+    element.all(by.css('app-list ul li')).last().click();
+    browser.waitForAngular();
+    expect(browser.getCurrentUrl()).toContain('/show/10');
+  });
 });
