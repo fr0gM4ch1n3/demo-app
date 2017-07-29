@@ -1,0 +1,5 @@
+<div class="photo-grid">
+    <div *ngFor="let photo of photos | byAlbumId:albumId" [ngStyle]="{'background-image': 'url(' + photo.thumbnailUrl + ')'}">
+        <h4>{{photo.title}}</h4>
+    </div>
+</div>
