@@ -1,0 +1,36 @@
+:host {
+    height: 100%;
+    overflow: auto;
+    background-color: #333;
+    color: #EEE;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul>li {
+    padding: 16px;
+    filter: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #333;
+    transition: filter .28s ease;
+    border: 6px solid transparent;
+}
+
+ul>li.selected {
+    color: #F44336;
+    border-left-color: #F44336;
+}
+
+ul>li:hover {
+    filter: brightness(0.75);
+}
+
+h4,
+p {
+    margin: 0;
+}
