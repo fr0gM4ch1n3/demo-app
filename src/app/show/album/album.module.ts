@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { AlbumComponent } from './album.component';
 import { DataService } from '../../shared/data/data.service';
 
+import { ByAlbumIdPipe } from '../../shared/by-album-id/by-album-id.pipe';
+
 @NgModule({
   imports: [CommonModule],
-  declarations: [AlbumComponent],
+  declarations: [AlbumComponent, ByAlbumIdPipe],
   exports: [AlbumComponent],
   providers: [DataService]
 })

@@ -1,0 +1,27 @@
+:host {}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-grid>* {
+    width: 150px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.photo-grid>*:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.photo-grid>*>h4 {
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .65);
+}

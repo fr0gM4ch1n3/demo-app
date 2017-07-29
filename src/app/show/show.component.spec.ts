@@ -6,6 +6,8 @@ import { Observable } from 'rxjs/Observable';
 
 import { ShowComponent } from './show.component';
 import { DataService } from '../shared/data/data.service';
+import { ByAlbumIdPipe } from '../shared/by-album-id/by-album-id.pipe';
+import { ByUserIdPipe } from '../shared/by-user-id/by-user-id.pipe';
 
 describe('ShowComponent', () => {
   let component: ShowComponent;
@@ -14,7 +16,7 @@ describe('ShowComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule, RouterModule, HttpModule ],
-      declarations: [ ShowComponent ],
+      declarations: [ ShowComponent, ByAlbumIdPipe, ByUserIdPipe ],
       providers: [ DataService ]
     })
     .compileComponents();

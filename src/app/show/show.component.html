@@ -1,0 +1,10 @@
+<div class="albums">
+    <ul>
+        <li *ngFor="let album of albums | byUserId:userId" routerLink="{{album.id}}" routerLinkActive="selected">
+            <h4>{{album.title}}</h4>
+        </li>
+    </ul>
+</div>
+<div class="album-content">
+    <router-outlet></router-outlet>
+</div>

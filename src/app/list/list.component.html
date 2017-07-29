@@ -1,5 +1,5 @@
 <ul>
-    <li *ngFor="let user of users">
+    <li *ngFor="let user of users" routerLink="/show/{{user.id}}" routerLinkActive="selected">
         <h4>{{user.name}} ({{user.username}})</h4>
         <p>{{user.address.street}} {{user.address.suite}}<br>{{user.address.city}} {{user.address.zipcode}}</p>
     </li>

@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { AlbumComponent } from './album.component';
 import { DataService } from '../../shared/data/data.service';
+import { ByAlbumIdPipe } from '../../shared/by-album-id/by-album-id.pipe';
 
 describe('AlbumComponent', () => {
   let component: AlbumComponent;
@@ -12,7 +13,7 @@ describe('AlbumComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule, HttpModule ],
-      declarations: [ AlbumComponent ],
+      declarations: [ AlbumComponent, ByAlbumIdPipe ],
       providers: [ DataService ]
     })
     .compileComponents();
