@@ -3,11 +3,15 @@
 .photo-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .photo-grid>* {
-    width: 150px;
+    flex: 1 1;
+    min-width: 150px;
+    max-width: 200px;
     height: auto;
+    cursor: pointer;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -24,4 +28,10 @@
     bottom: 4px;
     width: 100%;
     background-color: rgba(255, 255, 255, .65);
+    opacity: 0;
+    transition: opacity .28s ease;
+}
+
+.photo-grid>*:hover>h4 {
+    opacity: 1;
 }
