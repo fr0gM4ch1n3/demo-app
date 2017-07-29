@@ -37,5 +37,5 @@ $ npm build
 $ npm test
 
 # run e2e tests
-$ npm e2e
+$ npm run e2e
 ```
