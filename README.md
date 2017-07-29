@@ -30,11 +30,11 @@ $ npm start
 # Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 # generate production build
-$ npm build
+$ npm run build
 # The build artifacts will be stored in the `dist/` directory.
 
 # run unit tests
-$ npm test
+$ npm run test
 
 # run e2e tests
 $ npm run e2e
